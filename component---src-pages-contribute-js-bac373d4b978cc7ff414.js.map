@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/contribute.js"],"names":[],"mappings":"6FAAA,4CAGe,4BACb,kBAAC,IAAD,KACE","file":"component---src-pages-contribute-js-bac373d4b978cc7ff414.js","sourcesContent":["import React from 'react'\nimport Layout from '../components/layout'\n\nexport default () => (\n  <Layout>\n    <h2>Contribute</h2>\n  </Layout>\n)\n"],"sourceRoot":""}
