@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{g6o5:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),u=t.n(a),l=t("Bl7J");n.default=function(e){e.data;return u.a.createElement(l.a,null,u.a.createElement("h2",null,"Frequently Asked Questions"))}}}]);
-//# sourceMappingURL=component---src-pages-faqs-js-a55831b026aec53bffb0.js.map
