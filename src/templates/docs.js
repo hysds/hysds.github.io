@@ -8,13 +8,14 @@ const article = css`
   margin-top: 3rem;
 `
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
   const post = data.markdownRemark
   return (
     <Layout>
       <article className={cx('container', article)}>
         <h2>{post.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <a href={pageContext.editUrl}>&#9998; Edit this page on GitHub</a>
       </article>
     </Layout>
   )
