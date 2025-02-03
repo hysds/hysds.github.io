@@ -1,0 +1,10 @@
+items:
+  - title: Documentation
+    to: /docs/getting-started/
+  - title: Tutorial
+    to: /tutorial/tutorial/
+  - title: Community
+    to: /community/support/
+  - title: GitHub
+    to: https://github.com/hysds/hysds
+    external: true

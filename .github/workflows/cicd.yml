@@ -1,0 +1,32 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [develop]
+    
+jobs:
+  cicd:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install, test, and build
+        run: |
+          yarn
+          yarn test
+          yarn build
+      - name: Deploy
+        uses: alex-page/blazing-fast-gh-pages-deploy@master
+        with:
+          repo-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: master
+          site-directory: public

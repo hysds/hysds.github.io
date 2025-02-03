@@ -1,0 +1,100 @@
+banner:
+  image: satellite
+
+primary:
+  - title: 'Project Highlight #1'
+    image: tosca
+    link: /docs/tosca/
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a
+    highlights:
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+
+  - title: 'Project Highlight #2'
+    image: metrics
+    link: /docs/metrics/
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+    highlights:
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+
+  - title: 'Project Highlight #3'
+    image: ridgecrest-quake-aria
+    link: /docs/how-hysds-works/
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+    highlights:
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+      - Lorem ipsum dolor sit amet consectetur
+
+featured:
+  - title: Faceted Search
+    description: HySDS takes a unique faceted search approach. Everything from jobs to data products can be faceted. # The ability to facet upon areas in a map allows for fast data processing of highly monitored areas.
+    image: database
+    link: /docs/tosca/
+
+  - title: Integrate Cloud Computing and On-Premise Machines
+    description: HySDS utilizes cloud services such as AWS to run heavy jobs such as satellite data processing. # Many of these jobs benefit from being run in parallel, so utilizing AWS allows them to be completed in a timely manner. However, light-weight  jobs such as revoking another job, don’t benefit from utilizing cloud services. These light weight jobs, among other jobs,  are performed by NASA’s on-site super computers. HySDS allows for seamless integration, utilizing cloud services when beneficial and on-site workers when it’s not.
+    image: cloud-computing
+    link: /docs/cloud-computing/
+
+  - title: Trigger rules for custom processing
+    description: Trigger rules enable automated custom processing. They can simply be added through the Mozart, The Resource Manager. # Trigger rules can be used to do anything from emailing an operator when a job has finished running or retry a failed job.
+    image: rules
+    link: /docs/trigger-rules/
+
+secondary:
+  - title: Projects using HySDS
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+    items:
+      - image: aria-logo
+        link: https://aria.jpl.nasa.gov/
+        external: true
+      - image: eos-logo
+        link: https://www.earthobservatory.sg/
+        external: true
+      - image: nisar-logo
+        link: https://nisar.jpl.nasa.gov/
+        external: true
+      - image: oco2-logo
+        link: https://oco2.jpl.nasa.gov/
+        external: true
+      - image: smap-logo
+        link: https://smap.jpl.nasa.gov/
+        external: true
+      - image: swot-logo
+        link: https://swot.jpl.nasa.gov/
+        external: true
+
+  - title: For the Community, by the Community
+    image:
+    link: /community/support/
+    description: HySDS was created by JPL and many amazing contributors. It's open-source and <free of charge>.
+
+  - title: Frequently Asked Questions
+    items:
+      - question: What is a science data system?
+        answer: Science data systems ingest raw scientific data as input and process it into more useful information (climate models, CO2 levels, water levels, etc).
+
+      - question: Who is HySDS for?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: What kind of data does it process?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: Where do you get the raw data before it's processed?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: How much is running HySDS on Amazon going to cost me?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: How much time will it take for me to learn how to use this?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: How do I interpret the interferograms that HySDS produces?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.
+
+      - question: How do I write some code that HySDS can utilize?
+        answer: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum ab unde voluptatibus nesciunt sapiente et, optio earum nihil cum dolor necessitatibus veritatis expedita quia at minima. Quia similique dignissimos a.

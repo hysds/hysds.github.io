@@ -1,43 +1,54 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Intro from '../components/home/intro'
+import Primary from '../components/home/primary'
+import Secondary from '../components/home/secondary'
+import Banner from '../components/banner'
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/">
-            HySDS Guides - 10min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import marketing from '../../content/home/marketing.yaml'
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
-}
+const Index = ({ data }) => (
+  <Layout>
+    <SEO />
+    {/* <Banner /> */}
+    <Intro data={[data, marketing.featured]} />
+    <Primary data={marketing.primary} />
+    <Secondary data={marketing.secondary} />
+  </Layout>
+)
+
+export default Index
+
+export const query = graphql`
+  {
+    hysds: allMarkdownRemark(filter: { frontmatter: { id: { eq: "hysds-overview" } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+          excerpt(pruneLength: 239)
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { frontmatter: { id: { eq: "about-hysds" } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+          excerpt(pruneLength: 300)
+        }
+      }
+    }
+    metadata: site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`

@@ -1,0 +1,34 @@
+- title: Documentation
+  items:
+    - title: About HySDS
+      to: /docs/about-hysds/
+    - title: Getting Started
+      to: /docs/getting-started/
+    - title: FAQ
+      to: /docs/faq/
+    - title: API Reference
+      to: /docs/api-reference/
+    - title: Contributing
+      to: /docs/contributing/
+
+- title: Community
+  items:
+    - title: Resources
+      to: /community/support/
+    - title: Code of Conduct
+      to: /community/code-of-conduct/
+
+- title: Support
+  items:
+    - title: Confluence Wiki
+      to: https://hysds-core.atlassian.net/wiki/spaces/HYS
+      external: true
+    - title: Issue Tracker
+      to: https://hysds-core.atlassian.net/projects/HC/issues
+      external: true
+    - title: GitHub
+      to: https://github.com/hysds/hysds
+      external: true
+    - title: StackOverflow
+      to: https://stackoverflow.com/questions/tagged/hysds
+      external: true
