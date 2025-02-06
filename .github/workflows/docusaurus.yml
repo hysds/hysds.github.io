@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main  # Ensure deployment happens on pushes to main
+      - docusaurus
 
 jobs:
   deploy:
