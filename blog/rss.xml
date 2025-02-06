@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>HySDS Blog</title>
+        <link>https://hysds.github.io/blog</link>
+        <description>HySDS Blog</description>
+        <lastBuildDate>Fri, 01 Nov 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[HySDS - Powering NASA's Earth Science Data Processing at Scale]]></title>
+            <link>https://hysds.github.io/blog/hysds-earth-science-data-processing</link>
+            <guid>https://hysds.github.io/blog/hysds-earth-science-data-processing</guid>
+            <pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[HySDS (Hybrid Cloud Science Data Processing System) is revolutionizing how NASA handles massive-scale Earth science data processing. With the ability to process over 300TB of data per day and support for 3-million processing jobs daily, it has become the backbone of NASA's most critical Earth Science missions.]]></description>
+            <content:encoded><![CDATA[<p>HySDS (Hybrid Cloud Science Data Processing System) is revolutionizing how NASA handles massive-scale Earth science data processing. With the ability to process over 300TB of data per day and support for 3-million processing jobs daily, it has become the backbone of NASA's most critical Earth Science missions.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-birth-of-a-solution">The Birth of a Solution<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#the-birth-of-a-solution" class="hash-link" aria-label="Direct link to The Birth of a Solution" title="Direct link to The Birth of a Solution">​</a></h2>
+<p>Back in 2008, what started as a service-based science data processing initiative under ACCESS has evolved into one of NASA's most critical data processing frameworks. The motivation was clear: Earth science missions were facing a staggering 100x increase in daily data volumes, and traditional on-premise compute solutions weren't going to cut it anymore.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="breaking-records-and-setting-standards">Breaking Records and Setting Standards<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#breaking-records-and-setting-standards" class="hash-link" aria-label="Direct link to Breaking Records and Setting Standards" title="Direct link to Breaking Records and Setting Standards">​</a></h2>
+<p>HySDS has achieved several groundbreaking milestones:</p>
+<ul>
+<li>First NASA Science Data System (SDS) to scale to over 8,000 parallel compute nodes in the cloud</li>
+<li>First to successfully utilize AWS spot market for cost-effective data processing</li>
+<li>Pioneer in running Earth Observation Science Data Systems operations in the cloud</li>
+<li>First to span operations across multiple cloud providers (AWS, GCP, Azure) and NASA's HECC</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="real-world-impact">Real-World Impact<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#real-world-impact" class="hash-link" aria-label="Direct link to Real-World Impact" title="Direct link to Real-World Impact">​</a></h2>
+<p>The numbers speak for themselves. Currently, HySDS is:</p>
+<ul>
+<li>Processing over 300TB of data per day for NISAR</li>
+<li>Handled 2PB of data processing for SWOT in its first year</li>
+<li>Supporting 3-million processing jobs per day</li>
+<li>Being used by 13 active NASA projects in 2024</li>
+<li>Has been integrated into 33 NASA-funded projects to date</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="community-driven-innovation">Community-Driven Innovation<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#community-driven-innovation" class="hash-link" aria-label="Direct link to Community-Driven Innovation" title="Direct link to Community-Driven Innovation">​</a></h2>
+<p>What makes HySDS truly special is its community approach. With over 50 developers and 30+ contributors, the system has fostered a collaborative environment where improvements made by one project benefit the entire ecosystem. The community coordinates through:</p>
+<ul>
+<li>Bi-weekly multi-mission meetings</li>
+<li>Active public GitHub repositories</li>
+<li>Community Slack channels</li>
+<li>Shared documentation and operational procedures</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="supporting-critical-nasa-missions">Supporting Critical NASA Missions<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#supporting-critical-nasa-missions" class="hash-link" aria-label="Direct link to Supporting Critical NASA Missions" title="Direct link to Supporting Critical NASA Missions">​</a></h2>
+<p>HySDS has become the backbone for several flagship NASA Earth Science missions:</p>
+<ul>
+<li>NISAR (NASA-ISRO Synthetic Aperture Radar)</li>
+<li>SWOT (Surface Water Ocean Topography)</li>
+<li>SMAP (Soil Moisture Active Passive)</li>
+<li>SNWG OPERA</li>
+<li>OCO-2 and OCO-3 reprocessing</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-to-the-future">Looking to the Future<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#looking-to-the-future" class="hash-link" aria-label="Direct link to Looking to the Future" title="Direct link to Looking to the Future">​</a></h2>
+<p>As we move forward, HySDS continues to evolve. The system's open-source nature and community-driven development model ensure it stays at the forefront of Earth science data processing technology. With upcoming missions promising even larger data volumes, HySDS's hybrid approach and scalable architecture position it perfectly for future challenges.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-involved">Getting Involved<a href="https://hysds.github.io/blog/hysds-earth-science-data-processing#getting-involved" class="hash-link" aria-label="Direct link to Getting Involved" title="Direct link to Getting Involved">​</a></h2>
+<p>For those interested in joining the HySDS community, the project maintains an active presence on GitHub and welcomes contributions from developers, scientists, and enthusiasts alike. The codebase is available at <a href="https://github.com/hysds/" target="_blank" rel="noopener noreferrer">https://github.com/hysds/</a>, and the community wiki provides extensive documentation and resources for newcomers.</p>
+<hr>
+<p><em>Copyright 2024, by the California Institute of Technology. ALL RIGHTS RESERVED. United States Government Sponsorship acknowledged.</em></p>]]></content:encoded>
+            <category>nasa</category>
+            <category>earth-science</category>
+            <category>cloud-computing</category>
+            <category>big-data</category>
+            <category>open-source</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://hysds.github.io/blog/welcome</link>
+            <guid>https://hysds.github.io/blog/welcome</guid>
+            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></description>
+            <content:encoded><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
+<p>Here are a few tips you might find useful.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
+<p>The blog post date can be extracted from filenames, such as:</p>
+<ul>
+<li><code>2019-05-30-welcome.md</code></li>
+<li><code>2019-05-30-welcome/index.md</code></li>
+</ul>
+<p>A blog post folder can be convenient to co-locate blog post images:</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://hysds.github.io/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p>The blog supports tags as well!</p>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content:encoded>
+            <category>Facebook</category>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
+    </channel>
+</rss>

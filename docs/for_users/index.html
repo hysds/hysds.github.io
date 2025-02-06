@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-for_users" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">For Users | HySDS</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hysds.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hysds.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hysds.github.io/docs/for_users"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="For Users | HySDS"><meta data-rh="true" name="description" content="HySDS (Hybrid Cloud Science Data Processing System) is an open source science data processing system designed for large-scale Earth Science data processing. This guide will help you understand how to use HySDS effectively for your data processing needs."><meta data-rh="true" property="og:description" content="HySDS (Hybrid Cloud Science Data Processing System) is an open source science data processing system designed for large-scale Earth Science data processing. This guide will help you understand how to use HySDS effectively for your data processing needs."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hysds.github.io/docs/for_users"><link data-rh="true" rel="alternate" href="https://hysds.github.io/docs/for_users" hreflang="en"><link data-rh="true" rel="alternate" href="https://hysds.github.io/docs/for_users" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="HySDS RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="HySDS Atom Feed"><link rel="stylesheet" href="/assets/css/styles.40f04aae.css">
+<script src="/assets/js/runtime~main.70b38410.js" defer="defer"></script>
+<script src="/assets/js/main.285f7b88.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">HySDS</b></a><a class="navbar__item navbar__link" href="/docs/">Docs</a><a class="navbar__item navbar__link" href="/docs/api/">API</a><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/showcase/">Showcase</a><a class="navbar__item navbar__link" href="/docs/community/">Community</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/hysds/hysds" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/">What is HySDS?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/features">Features</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/key_concepts">Key Concepts</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/design">Design</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/for_developers">For Developers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/for_operators">For Operators</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/for_users">For Users</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/contributing">Contributing</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">For Users</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>For Users</h1></header>
+<p>HySDS (Hybrid Cloud Science Data Processing System) is an open source science data processing system designed for large-scale Earth Science data processing. This guide will help you understand how to use HySDS effectively for your data processing needs.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-hysds">What is HySDS?<a href="#what-is-hysds" class="hash-link" aria-label="Direct link to What is HySDS?" title="Direct link to What is HySDS?">​</a></h3>
+<p>HySDS enables:</p>
+<ul>
+<li>Large-scale science data processing (300TB+ per day)</li>
+<li>Parallel processing across thousands of nodes</li>
+<li>Hybrid cloud and on-premise processing</li>
+<li>Machine learning and GPU processing</li>
+<li>Low-latency urgent response processing</li>
+<li>On-demand processing capabilities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="access-requirements">Access Requirements<a href="#access-requirements" class="hash-link" aria-label="Direct link to Access Requirements" title="Direct link to Access Requirements">​</a></h3>
+<ul>
+<li>System access credentials</li>
+<li>Appropriate permissions for your project</li>
+<li>Network access to required resources</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="using-hysds">Using HySDS<a href="#using-hysds" class="hash-link" aria-label="Direct link to Using HySDS" title="Direct link to Using HySDS">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-discovery">Data Discovery<a href="#data-discovery" class="hash-link" aria-label="Direct link to Data Discovery" title="Direct link to Data Discovery">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="using-the-grq-interface">Using the GRQ Interface<a href="#using-the-grq-interface" class="hash-link" aria-label="Direct link to Using the GRQ Interface" title="Direct link to Using the GRQ Interface">​</a></h4>
+<ol>
+<li>Navigate to the GRQ (Geo Region Query) interface</li>
+<li>Use the faceted search to find datasets:<!-- -->
+<ul>
+<li>Filter by data type</li>
+<li>Filter by date range</li>
+<li>Filter by geographic area</li>
+<li>Filter by processing level</li>
+</ul>
+</li>
+<li>Review search results</li>
+<li>Select datasets for processing</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="search-tips">Search Tips<a href="#search-tips" class="hash-link" aria-label="Direct link to Search Tips" title="Direct link to Search Tips">​</a></h4>
+<ul>
+<li>Use wildcards for broader searches</li>
+<li>Combine multiple filters for precise results</li>
+<li>Save common searches for future use</li>
+<li>Export search results if needed</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="submitting-jobs">Submitting Jobs<a href="#submitting-jobs" class="hash-link" aria-label="Direct link to Submitting Jobs" title="Direct link to Submitting Jobs">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="basic-job-submission">Basic Job Submission<a href="#basic-job-submission" class="hash-link" aria-label="Direct link to Basic Job Submission" title="Direct link to Basic Job Submission">​</a></h4>
+<ol>
+<li>Select your processing algorithm/PGE</li>
+<li>Choose input data</li>
+<li>Set processing parameters</li>
+<li>Submit the job</li>
+<li>Monitor job progress</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="job-types">Job Types<a href="#job-types" class="hash-link" aria-label="Direct link to Job Types" title="Direct link to Job Types">​</a></h4>
+<ul>
+<li>On-demand processing</li>
+<li>Bulk processing</li>
+<li>Urgent response processing</li>
+<li>Reprocessing campaigns</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring-your-jobs">Monitoring Your Jobs<a href="#monitoring-your-jobs" class="hash-link" aria-label="Direct link to Monitoring Your Jobs" title="Direct link to Monitoring Your Jobs">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="job-status-dashboard">Job Status Dashboard<a href="#job-status-dashboard" class="hash-link" aria-label="Direct link to Job Status Dashboard" title="Direct link to Job Status Dashboard">​</a></h4>
+<ul>
+<li>View active jobs</li>
+<li>Check job status</li>
+<li>Monitor processing progress</li>
+<li>Access job logs</li>
+<li>View resource utilization</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="status-definitions">Status Definitions<a href="#status-definitions" class="hash-link" aria-label="Direct link to Status Definitions" title="Direct link to Status Definitions">​</a></h4>
+<ul>
+<li><code>PENDING</code>: Job is queued</li>
+<li><code>RUNNING</code>: Job is actively processing</li>
+<li><code>COMPLETED</code>: Job finished successfully</li>
+<li><code>FAILED</code>: Job encountered an error</li>
+<li><code>REVOKED</code>: Job was cancelled</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-results">Accessing Results<a href="#accessing-results" class="hash-link" aria-label="Direct link to Accessing Results" title="Direct link to Accessing Results">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="finding-processed-data">Finding Processed Data<a href="#finding-processed-data" class="hash-link" aria-label="Direct link to Finding Processed Data" title="Direct link to Finding Processed Data">​</a></h4>
+<ol>
+<li>Use GRQ to search for your job outputs</li>
+<li>Filter by job ID or processing date</li>
+<li>Download or access results</li>
+<li>Verify data completeness</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-formats">Data Formats<a href="#data-formats" class="hash-link" aria-label="Direct link to Data Formats" title="Direct link to Data Formats">​</a></h4>
+<ul>
+<li>Review available output formats</li>
+<li>Check data specifications</li>
+<li>Verify product metadata</li>
+<li>Access associated browse products</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-features">Advanced Features<a href="#advanced-features" class="hash-link" aria-label="Direct link to Advanced Features" title="Direct link to Advanced Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-triggers">Setting Up Triggers<a href="#setting-up-triggers" class="hash-link" aria-label="Direct link to Setting Up Triggers" title="Direct link to Setting Up Triggers">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="automated-processing-rules">Automated Processing Rules<a href="#automated-processing-rules" class="hash-link" aria-label="Direct link to Automated Processing Rules" title="Direct link to Automated Processing Rules">​</a></h4>
+<ol>
+<li>Define input criteria</li>
+<li>Set processing parameters</li>
+<li>Configure output handling</li>
+<li>Activate the trigger</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="types-of-triggers">Types of Triggers<a href="#types-of-triggers" class="hash-link" aria-label="Direct link to Types of Triggers" title="Direct link to Types of Triggers">​</a></h4>
+<ul>
+<li>New data triggers</li>
+<li>Geographic area monitoring</li>
+<li>Temporal triggers</li>
+<li>Event-based triggers</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="using-the-api">Using the API<a href="#using-the-api" class="hash-link" aria-label="Direct link to Using the API" title="Direct link to Using the API">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="basic-api-usage">Basic API Usage<a href="#basic-api-usage" class="hash-link" aria-label="Direct link to Basic API Usage" title="Direct link to Basic API Usage">​</a></h4>
+<ul>
+<li>Authentication</li>
+<li>Job submission</li>
+<li>Status checking</li>
+<li>Result retrieval</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="api-best-practices">API Best Practices<a href="#api-best-practices" class="hash-link" aria-label="Direct link to API Best Practices" title="Direct link to API Best Practices">​</a></h4>
+<ul>
+<li>Rate limiting considerations</li>
+<li>Error handling</li>
+<li>Batch operations</li>
+<li>Resource management</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="job-management">Job Management<a href="#job-management" class="hash-link" aria-label="Direct link to Job Management" title="Direct link to Job Management">​</a></h3>
+<ol>
+<li>Start with small test jobs</li>
+<li>Monitor resource usage</li>
+<li>Use appropriate queue priorities</li>
+<li>Clean up completed jobs</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-management">Data Management<a href="#data-management" class="hash-link" aria-label="Direct link to Data Management" title="Direct link to Data Management">​</a></h3>
+<ol>
+<li>Verify input data quality</li>
+<li>Monitor storage usage</li>
+<li>Archive results promptly</li>
+<li>Document processing steps</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-issues">Common Issues<a href="#common-issues" class="hash-link" aria-label="Direct link to Common Issues" title="Direct link to Common Issues">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="job-failures">Job Failures<a href="#job-failures" class="hash-link" aria-label="Direct link to Job Failures" title="Direct link to Job Failures">​</a></h4>
+<ul>
+<li>Check input data availability</li>
+<li>Verify parameter settings</li>
+<li>Review resource allocations</li>
+<li>Check error logs</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues">​</a></h4>
+<ul>
+<li>Monitor queue status</li>
+<li>Check resource availability</li>
+<li>Verify data access</li>
+<li>Review job configuration</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="getting-help">Getting Help<a href="#getting-help" class="hash-link" aria-label="Direct link to Getting Help" title="Direct link to Getting Help">​</a></h3>
+<ol>
+<li>Check documentation</li>
+<li>Review error messages</li>
+<li>Contact support team</li>
+<li>Join community discussions</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a href="#resources" class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="documentation">Documentation<a href="#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation">​</a></h3>
+<ul>
+<li>User manuals</li>
+<li>API documentation</li>
+<li>Example workflows</li>
+<li>Best practices guides</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-support">Community Support<a href="#community-support" class="hash-link" aria-label="Direct link to Community Support" title="Direct link to Community Support">​</a></h3>
+<ul>
+<li>Slack channels: #hysds-community, #hysds-general</li>
+<li>Issue tracking system</li>
+<li>Community wiki</li>
+<li>Regular user meetings</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="training-materials">Training Materials<a href="#training-materials" class="hash-link" aria-label="Direct link to Training Materials" title="Direct link to Training Materials">​</a></h3>
+<ul>
+<li>Tutorials</li>
+<li>Video guides</li>
+<li>Example notebooks</li>
+<li>Sample workflows</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="project-examples">Project Examples<a href="#project-examples" class="hash-link" aria-label="Direct link to Project Examples" title="Direct link to Project Examples">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sample-use-cases">Sample Use Cases<a href="#sample-use-cases" class="hash-link" aria-label="Direct link to Sample Use Cases" title="Direct link to Sample Use Cases">​</a></h3>
+<ul>
+<li>NISAR data processing</li>
+<li>SWOT data production</li>
+<li>OCO-2/3 reprocessing</li>
+<li>SMAP data processing</li>
+<li>On-demand product generation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="success-stories">Success Stories<a href="#success-stories" class="hash-link" aria-label="Direct link to Success Stories" title="Direct link to Success Stories">​</a></h3>
+<ul>
+<li>Processing 2PB+ of SWOT data</li>
+<li>Supporting 300TB/day for NISAR</li>
+<li>Scaling to 8,000+ parallel nodes</li>
+<li>Multi-mission support</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-and-privacy">Security and Privacy<a href="#security-and-privacy" class="hash-link" aria-label="Direct link to Security and Privacy" title="Direct link to Security and Privacy">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-protection">Data Protection<a href="#data-protection" class="hash-link" aria-label="Direct link to Data Protection" title="Direct link to Data Protection">​</a></h3>
+<ul>
+<li>Access control</li>
+<li>Data encryption</li>
+<li>Privacy considerations</li>
+<li>Usage tracking</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-1">Best Practices<a href="#best-practices-1" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h3>
+<ul>
+<li>Credential management</li>
+<li>Secure data handling</li>
+<li>Resource isolation</li>
+<li>Access logging</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-additional-help">Getting Additional Help<a href="#getting-additional-help" class="hash-link" aria-label="Direct link to Getting Additional Help" title="Direct link to Getting Additional Help">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-channels">Support Channels<a href="#support-channels" class="hash-link" aria-label="Direct link to Support Channels" title="Direct link to Support Channels">​</a></h3>
+<ol>
+<li>Documentation resources</li>
+<li>Community forums</li>
+<li>Support tickets</li>
+<li>User group meetings</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="feedback-and-contributions">Feedback and Contributions<a href="#feedback-and-contributions" class="hash-link" aria-label="Direct link to Feedback and Contributions" title="Direct link to Feedback and Contributions">​</a></h3>
+<ul>
+<li>Feature requests</li>
+<li>Bug reports</li>
+<li>Documentation improvements</li>
+<li>Community sharing</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="appendix">Appendix<a href="#appendix" class="hash-link" aria-label="Direct link to Appendix" title="Direct link to Appendix">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="glossary">Glossary<a href="#glossary" class="hash-link" aria-label="Direct link to Glossary" title="Direct link to Glossary">​</a></h3>
+<ul>
+<li>Common terms</li>
+<li>System components</li>
+<li>Processing terminology</li>
+<li>Technical acronyms</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="quick-reference">Quick Reference<a href="#quick-reference" class="hash-link" aria-label="Direct link to Quick Reference" title="Direct link to Quick Reference">​</a></h3>
+<ul>
+<li>Common commands</li>
+<li>Useful queries</li>
+<li>Status codes</li>
+<li>Error messages</li>
+</ul>
+<p>Remember to check the <a href="https://hysds-core.atlassian.net/" target="_blank" rel="noopener noreferrer">community wiki</a> for the latest updates and detailed information about specific features or workflows.</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/for_operators"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">For Operators</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/contributing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Contributing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting Started</a><ul><li><a href="#what-is-hysds" class="table-of-contents__link toc-highlight">What is HySDS?</a></li><li><a href="#access-requirements" class="table-of-contents__link toc-highlight">Access Requirements</a></li></ul></li><li><a href="#using-hysds" class="table-of-contents__link toc-highlight">Using HySDS</a><ul><li><a href="#data-discovery" class="table-of-contents__link toc-highlight">Data Discovery</a></li><li><a href="#submitting-jobs" class="table-of-contents__link toc-highlight">Submitting Jobs</a></li><li><a href="#monitoring-your-jobs" class="table-of-contents__link toc-highlight">Monitoring Your Jobs</a></li><li><a href="#accessing-results" class="table-of-contents__link toc-highlight">Accessing Results</a></li></ul></li><li><a href="#advanced-features" class="table-of-contents__link toc-highlight">Advanced Features</a><ul><li><a href="#setting-up-triggers" class="table-of-contents__link toc-highlight">Setting Up Triggers</a></li><li><a href="#using-the-api" class="table-of-contents__link toc-highlight">Using the API</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#job-management" class="table-of-contents__link toc-highlight">Job Management</a></li><li><a href="#data-management" class="table-of-contents__link toc-highlight">Data Management</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#common-issues" class="table-of-contents__link toc-highlight">Common Issues</a></li><li><a href="#getting-help" class="table-of-contents__link toc-highlight">Getting Help</a></li></ul></li><li><a href="#resources" class="table-of-contents__link toc-highlight">Resources</a><ul><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li><li><a href="#community-support" class="table-of-contents__link toc-highlight">Community Support</a></li><li><a href="#training-materials" class="table-of-contents__link toc-highlight">Training Materials</a></li></ul></li><li><a href="#project-examples" class="table-of-contents__link toc-highlight">Project Examples</a><ul><li><a href="#sample-use-cases" class="table-of-contents__link toc-highlight">Sample Use Cases</a></li><li><a href="#success-stories" class="table-of-contents__link toc-highlight">Success Stories</a></li></ul></li><li><a href="#security-and-privacy" class="table-of-contents__link toc-highlight">Security and Privacy</a><ul><li><a href="#data-protection" class="table-of-contents__link toc-highlight">Data Protection</a></li><li><a href="#best-practices-1" class="table-of-contents__link toc-highlight">Best Practices</a></li></ul></li><li><a href="#getting-additional-help" class="table-of-contents__link toc-highlight">Getting Additional Help</a><ul><li><a href="#support-channels" class="table-of-contents__link toc-highlight">Support Channels</a></li><li><a href="#feedback-and-contributions" class="table-of-contents__link toc-highlight">Feedback and Contributions</a></li></ul></li><li><a href="#appendix" class="table-of-contents__link toc-highlight">Appendix</a><ul><li><a href="#glossary" class="table-of-contents__link toc-highlight">Glossary</a></li><li><a href="#quick-reference" class="table-of-contents__link toc-highlight">Quick Reference</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/">Docs</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/api/">API</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/showcase">Showcase</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/hysds/hysds/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Issues<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/hysds/hysds" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 California Institute of Technology. U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.</div></div></div></footer></div>
+</body>
+</html>

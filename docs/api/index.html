@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-api/readme" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">API | HySDS</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hysds.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hysds.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hysds.github.io/docs/api/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="API | HySDS"><meta data-rh="true" name="description" content="HySDS (Hybrid Cloud Science Data System) is an open source science data processing system used across many large-scale Earth Science missions, data production, and analysis systems. This documentation covers the key APIs and components of HySDS."><meta data-rh="true" property="og:description" content="HySDS (Hybrid Cloud Science Data System) is an open source science data processing system used across many large-scale Earth Science missions, data production, and analysis systems. This documentation covers the key APIs and components of HySDS."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hysds.github.io/docs/api/"><link data-rh="true" rel="alternate" href="https://hysds.github.io/docs/api/" hreflang="en"><link data-rh="true" rel="alternate" href="https://hysds.github.io/docs/api/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="HySDS RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="HySDS Atom Feed"><link rel="stylesheet" href="/assets/css/styles.40f04aae.css">
+<script src="/assets/js/runtime~main.70b38410.js" defer="defer"></script>
+<script src="/assets/js/main.285f7b88.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">HySDS</b></a><a class="navbar__item navbar__link" href="/docs/">Docs</a><a class="navbar__item navbar__link" href="/docs/api/">API</a><a class="navbar__item navbar__link" href="/blog">Blog</a><a class="navbar__item navbar__link" href="/docs/showcase/">Showcase</a><a class="navbar__item navbar__link" href="/docs/community/">Community</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/hysds/hysds" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item hidden"><a class="menu__link menu__link--active" aria-current="page" href="/docs/api/">API</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">API</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>API</h1></header>
+<p>HySDS (Hybrid Cloud Science Data System) is an open source science data processing system used across many large-scale Earth Science missions, data production, and analysis systems. This documentation covers the key APIs and components of HySDS.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-components">Core Components<a href="#core-components" class="hash-link" aria-label="Direct link to Core Components" title="Direct link to Core Components">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="grq-geo-region-query">GRQ (Geo Region Query)<a href="#grq-geo-region-query" class="hash-link" aria-label="Direct link to GRQ (Geo Region Query)" title="Direct link to GRQ (Geo Region Query)">​</a></h3>
+<p>The geospatial catalog and data management component that provides:</p>
+<ul>
+<li>Faceted search of data products</li>
+<li>Production rules evaluation and actions</li>
+<li>Data triggering based on spatial queries</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="key-apis">Key APIs:<a href="#key-apis" class="hash-link" aria-label="Direct link to Key APIs:" title="Direct link to Key APIs:">​</a></h4>
+<ul>
+<li>Data catalog queries</li>
+<li>Metadata ingest</li>
+<li>Production rule management</li>
+<li>Trigger evaluation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mozart">Mozart<a href="#mozart" class="hash-link" aria-label="Direct link to Mozart" title="Direct link to Mozart">​</a></h3>
+<p>Job management and orchestration component handling:</p>
+<ul>
+<li>Faceted search management of jobs</li>
+<li>Production rules evaluation and actions</li>
+<li>Queue management</li>
+<li>Job status tracking</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="key-apis-1">Key APIs:<a href="#key-apis-1" class="hash-link" aria-label="Direct link to Key APIs:" title="Direct link to Key APIs:">​</a></h4>
+<ul>
+<li>Job submission</li>
+<li>Queue management</li>
+<li>Job status queries</li>
+<li>Production rule management</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics">Metrics<a href="#metrics" class="hash-link" aria-label="Direct link to Metrics" title="Direct link to Metrics">​</a></h3>
+<p>Runtime analytics component providing:</p>
+<ul>
+<li>Real-time job metrics</li>
+<li>Worker metrics</li>
+<li>Processing statistics</li>
+<li>Performance monitoring</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="key-apis-2">Key APIs:<a href="#key-apis-2" class="hash-link" aria-label="Direct link to Key APIs:" title="Direct link to Key APIs:">​</a></h4>
+<ul>
+<li>Metrics queries</li>
+<li>Worker status</li>
+<li>Performance analytics</li>
+<li>Resource utilization</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="factotum">Factotum<a href="#factotum" class="hash-link" aria-label="Direct link to Factotum" title="Direct link to Factotum">​</a></h3>
+<p>&quot;Hot&quot; helper workers component for:</p>
+<ul>
+<li>Low-latency processes</li>
+<li>Job preprocessing</li>
+<li>Status updates</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="key-apis-3">Key APIs:<a href="#key-apis-3" class="hash-link" aria-label="Direct link to Key APIs:" title="Direct link to Key APIs:">​</a></h4>
+<ul>
+<li>Worker management</li>
+<li>Process control</li>
+<li>Status updates</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="verdi-workers">Verdi Workers<a href="#verdi-workers" class="hash-link" aria-label="Direct link to Verdi Workers" title="Direct link to Verdi Workers">​</a></h3>
+<p>Distributed compute nodes that:</p>
+<ul>
+<li>Run PGEs (Product Generation Executives) at scale</li>
+<li>Handle data staging</li>
+<li>Manage job execution</li>
+<li>Report status</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="key-apis-4">Key APIs:<a href="#key-apis-4" class="hash-link" aria-label="Direct link to Key APIs:" title="Direct link to Key APIs:">​</a></h4>
+<ul>
+<li>Job execution</li>
+<li>Data staging</li>
+<li>Status reporting</li>
+<li>Resource management</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deployment-options">Deployment Options<a href="#deployment-options" class="hash-link" aria-label="Direct link to Deployment Options" title="Direct link to Deployment Options">​</a></h2>
+<p>HySDS supports multiple deployment configurations:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cloud-deployment">Cloud Deployment<a href="#cloud-deployment" class="hash-link" aria-label="Direct link to Cloud Deployment" title="Direct link to Cloud Deployment">​</a></h3>
+<ul>
+<li>AWS Auto-Scaling Spot Fleet support</li>
+<li>Elastic compute scaling</li>
+<li>S3 data management</li>
+<li>Cloud-native services integration</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="on-premise-deployment">On-Premise Deployment<a href="#on-premise-deployment" class="hash-link" aria-label="Direct link to On-Premise Deployment" title="Direct link to On-Premise Deployment">​</a></h3>
+<ul>
+<li>Local compute cluster support</li>
+<li>Shared filesystem integration</li>
+<li>Local data management</li>
+<li>Infrastructure optimization</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hybrid-cloud-deployment">Hybrid Cloud Deployment<a href="#hybrid-cloud-deployment" class="hash-link" aria-label="Direct link to Hybrid Cloud Deployment" title="Direct link to Hybrid Cloud Deployment">​</a></h3>
+<ul>
+<li>Spans both cloud and on-premise resources</li>
+<li>Unified management plane</li>
+<li>Cross-platform data handling</li>
+<li>Flexible resource allocation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hecc-high-end-computing-capability-integration">HECC (High-End Computing Capability) Integration<a href="#hecc-high-end-computing-capability-integration" class="hash-link" aria-label="Direct link to HECC (High-End Computing Capability) Integration" title="Direct link to HECC (High-End Computing Capability) Integration">​</a></h3>
+<ul>
+<li>PBS job management</li>
+<li>HPC cluster integration</li>
+<li>Specialized resource handling</li>
+<li>Performance optimization</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-interfaces">Key Interfaces<a href="#key-interfaces" class="hash-link" aria-label="Direct link to Key Interfaces" title="Direct link to Key Interfaces">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-management">Data Management<a href="#data-management" class="hash-link" aria-label="Direct link to Data Management" title="Direct link to Data Management">​</a></h3>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># GRQ Data Catalog Interface</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">DataCatalog</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">ingest</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">metadata</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Ingest metadata into catalog&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">search</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">query</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Search catalog with faceted query&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">trigger_rules</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">data</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Evaluate trigger rules on data&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="job-management">Job Management<a href="#job-management" class="hash-link" aria-label="Direct link to Job Management" title="Direct link to Job Management">​</a></h3>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Mozart Job Management Interface</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">JobManager</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">submit</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">job_spec</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Submit job for execution&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">status</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">job_id</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Get job status&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">manage_queue</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">queue_id</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> action</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Manage job queues&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="worker-management">Worker Management<a href="#worker-management" class="hash-link" aria-label="Direct link to Worker Management" title="Direct link to Worker Management">​</a></h3>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Verdi Worker Interface</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">VerdiWorker</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">execute</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">job</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Execute job on worker&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">stage_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">data_ref</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Stage data for job&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">report_status</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">status</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token triple-quoted-string string" style="color:#e3116c">&quot;&quot;&quot;Report job status&quot;&quot;&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token keyword" style="color:#00009f">pass</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="auto-scaling">Auto-Scaling<a href="#auto-scaling" class="hash-link" aria-label="Direct link to Auto-Scaling" title="Direct link to Auto-Scaling">​</a></h2>
+<p>HySDS provides sophisticated auto-scaling capabilities:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scale-out">Scale Out<a href="#scale-out" class="hash-link" aria-label="Direct link to Scale Out" title="Direct link to Scale Out">​</a></h3>
+<ul>
+<li>Based on queue backlog</li>
+<li>Configurable thresholds</li>
+<li>Resource-aware scaling</li>
+<li>Platform-specific optimization</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scale-in">Scale In<a href="#scale-in" class="hash-link" aria-label="Direct link to Scale In" title="Direct link to Scale In">​</a></h3>
+<ul>
+<li>Based on worker utilization</li>
+<li>Graceful shutdown</li>
+<li>Resource reclamation</li>
+<li>Cost optimization</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="production-rules">Production Rules<a href="#production-rules" class="hash-link" aria-label="Direct link to Production Rules" title="Direct link to Production Rules">​</a></h2>
+<p>HySDS supports flexible production rules for automation:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="trigger-types">Trigger Types<a href="#trigger-types" class="hash-link" aria-label="Direct link to Trigger Types" title="Direct link to Trigger Types">​</a></h3>
+<ul>
+<li>Data-based triggers</li>
+<li>Time-based triggers</li>
+<li>Event-based triggers</li>
+<li>Custom triggers</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rule-components">Rule Components<a href="#rule-components" class="hash-link" aria-label="Direct link to Rule Components" title="Direct link to Rule Components">​</a></h3>
+<ul>
+<li>Conditions</li>
+<li>Actions</li>
+<li>Parameters</li>
+<li>Constraints</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-considerations">Security Considerations<a href="#security-considerations" class="hash-link" aria-label="Direct link to Security Considerations" title="Direct link to Security Considerations">​</a></h2>
+<p>When deploying HySDS, consider:</p>
+<ul>
+<li>Authentication and authorization</li>
+<li>Network security</li>
+<li>Data protection</li>
+<li>Resource isolation</li>
+<li>Compliance requirements</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="deployment">Deployment<a href="#deployment" class="hash-link" aria-label="Direct link to Deployment" title="Direct link to Deployment">​</a></h3>
+<ul>
+<li>Use appropriate deployment topology</li>
+<li>Configure auto-scaling appropriately</li>
+<li>Monitor resource utilization</li>
+<li>Optimize data locality</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="development">Development<a href="#development" class="hash-link" aria-label="Direct link to Development" title="Direct link to Development">​</a></h3>
+<ul>
+<li>Follow API conventions</li>
+<li>Implement proper error handling</li>
+<li>Use appropriate logging</li>
+<li>Consider scalability</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="operations">Operations<a href="#operations" class="hash-link" aria-label="Direct link to Operations" title="Direct link to Operations">​</a></h3>
+<ul>
+<li>Monitor system health</li>
+<li>Manage resources effectively</li>
+<li>Handle errors gracefully</li>
+<li>Maintain security posture</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References">​</a></h2>
+<ul>
+<li>GitHub Repository: <a href="https://github.com/hysds/" target="_blank" rel="noopener noreferrer">https://github.com/hysds/</a></li>
+<li>Documentation Wiki: <a href="https://hysds-core.atlassian.net/wiki/spaces/HYS/overview" target="_blank" rel="noopener noreferrer">https://hysds-core.atlassian.net/wiki/spaces/HYS/overview</a></li>
+<li>Issue Tracking: <a href="https://hysds-core.atlassian.net/jira/software/c/projects/HC/issues" target="_blank" rel="noopener noreferrer">https://hysds-core.atlassian.net/jira/software/c/projects/HC/issues</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-help">Getting Help<a href="#getting-help" class="hash-link" aria-label="Direct link to Getting Help" title="Direct link to Getting Help">​</a></h2>
+<p>For additional support:</p>
+<ul>
+<li>Join the community Slack channels</li>
+<li>Submit issues on GitHub</li>
+<li>Consult the documentation wiki</li>
+<li>Contact the development team</li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#core-components" class="table-of-contents__link toc-highlight">Core Components</a><ul><li><a href="#grq-geo-region-query" class="table-of-contents__link toc-highlight">GRQ (Geo Region Query)</a></li><li><a href="#mozart" class="table-of-contents__link toc-highlight">Mozart</a></li><li><a href="#metrics" class="table-of-contents__link toc-highlight">Metrics</a></li><li><a href="#factotum" class="table-of-contents__link toc-highlight">Factotum</a></li><li><a href="#verdi-workers" class="table-of-contents__link toc-highlight">Verdi Workers</a></li></ul></li><li><a href="#deployment-options" class="table-of-contents__link toc-highlight">Deployment Options</a><ul><li><a href="#cloud-deployment" class="table-of-contents__link toc-highlight">Cloud Deployment</a></li><li><a href="#on-premise-deployment" class="table-of-contents__link toc-highlight">On-Premise Deployment</a></li><li><a href="#hybrid-cloud-deployment" class="table-of-contents__link toc-highlight">Hybrid Cloud Deployment</a></li><li><a href="#hecc-high-end-computing-capability-integration" class="table-of-contents__link toc-highlight">HECC (High-End Computing Capability) Integration</a></li></ul></li><li><a href="#key-interfaces" class="table-of-contents__link toc-highlight">Key Interfaces</a><ul><li><a href="#data-management" class="table-of-contents__link toc-highlight">Data Management</a></li><li><a href="#job-management" class="table-of-contents__link toc-highlight">Job Management</a></li><li><a href="#worker-management" class="table-of-contents__link toc-highlight">Worker Management</a></li></ul></li><li><a href="#auto-scaling" class="table-of-contents__link toc-highlight">Auto-Scaling</a><ul><li><a href="#scale-out" class="table-of-contents__link toc-highlight">Scale Out</a></li><li><a href="#scale-in" class="table-of-contents__link toc-highlight">Scale In</a></li></ul></li><li><a href="#production-rules" class="table-of-contents__link toc-highlight">Production Rules</a><ul><li><a href="#trigger-types" class="table-of-contents__link toc-highlight">Trigger Types</a></li><li><a href="#rule-components" class="table-of-contents__link toc-highlight">Rule Components</a></li></ul></li><li><a href="#security-considerations" class="table-of-contents__link toc-highlight">Security Considerations</a></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#deployment" class="table-of-contents__link toc-highlight">Deployment</a></li><li><a href="#development" class="table-of-contents__link toc-highlight">Development</a></li><li><a href="#operations" class="table-of-contents__link toc-highlight">Operations</a></li></ul></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li><li><a href="#getting-help" class="table-of-contents__link toc-highlight">Getting Help</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/">Docs</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/api/">API</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/showcase">Showcase</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/hysds/hysds/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Issues<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/hysds/hysds" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 California Institute of Technology. U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.</div></div></div></footer></div>
+</body>
+</html>
